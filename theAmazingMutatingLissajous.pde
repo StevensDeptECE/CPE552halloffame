@@ -44,9 +44,11 @@ void draw() {
     
     point(cos(q * i), cos(r * i), cos(p * i));
     
+  }
+ 
     if ((p <= 50) && (hasReached == false)) { 
       
-      p += .000001;
+      p += .01;
     
     } else if ((p >= 50) && (hasReached == false)) {
     
@@ -54,7 +56,7 @@ void draw() {
     
     } else if ((p >= -50) && (hasReached == true)) {
     
-      p -= .000001;
+      p -= .01;
     
     } else if ((p <= -50) && (hasReached == true)) {
     
@@ -62,8 +64,6 @@ void draw() {
     
     }
     
-  }
-  
   n += .01;
     
 }
