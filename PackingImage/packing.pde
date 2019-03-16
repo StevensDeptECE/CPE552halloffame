@@ -1,3 +1,7 @@
+/*
+*Author: Lin Qi, Xiaochan Xue
+*/
+
 ArrayList<Square> squares;
 PImage img;
 public void settings(){
