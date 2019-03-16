@@ -1,3 +1,7 @@
+/*
+*Author: Lin Qi, Xiaohan Xue
+*/
+
 class Square {
   float x;
   float y;
@@ -24,9 +28,6 @@ class Square {
   }
 
   void show() {
-    //stroke(255);
-    //strokeWeight(2);
-    //noFill();
     fill(c);
     noStroke();
     rect(x, y, r*2, r*2);
