@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/E:/EE552/DrawingApp/StevensDraw552/src/LineMode.java</file>
+            <file>file:/E:/EE552/DrawingApp/StevensDraw552/src/CrossMode.java</file>
+            <file>file:/E:/EE552/DrawingApp/StevensDraw552/src/DrawingApp.java</file>
+            <file>file:/E:/EE552/DrawingApp/StevensDraw552/src/Shape.java</file>
+            <file>file:/E:/EE552/DrawingApp/StevensDraw552/src/Cross.java</file>
+            <file>file:/E:/EE552/DrawingApp/StevensDraw552/src/Line.java</file>
+            <file>file:/E:/EE552/DrawingApp/StevensDraw552/src/DrawingArea.java</file>
+            <file>file:/E:/EE552/DrawingApp/StevensDraw552/src/Mode.java</file>
+        </group>
     </open-files>
 </project-private>
