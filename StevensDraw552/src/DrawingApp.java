@@ -47,7 +47,12 @@ public class DrawingApp extends JFrame {
 
         addModeButton(p, "Line Mode", DrawingArea.lineMode);
 //        addModeButton(p, "Rect Mode", rectMode);
+        addModeButton(p, "Rect Mode", DrawingArea.rectMode);
+        addModeButton(p, "ellipse mode", DrawingArea.Filledellipse);
+        //addModeButton(p, "Star Mode", DrawingArea.StarMode);
+        getContentPane().add(BorderLayout.WEST, p);
 
+        addModeButton(p, "Circle Mode", DrawingArea.circleMode);
         addModeButton(p, "Cross Mode", DrawingArea.CrossMode);
         getContentPane().add(BorderLayout.WEST, p);
     }
@@ -99,6 +104,7 @@ public class DrawingApp extends JFrame {
         c.add(BorderLayout.CENTER, drawing);
         setSize(1000, 800);
         setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
