@@ -50,8 +50,7 @@ public class DrawingApp extends JFrame {
         addModeButton(p, "Rect Mode", DrawingArea.rectMode);
         addModeButton(p, "ellipse mode", DrawingArea.Filledellipse);
         //addModeButton(p, "Star Mode", DrawingArea.StarMode);
-        getContentPane().add(BorderLayout.WEST, p);
-
+     
         addModeButton(p, "Circle Mode", DrawingArea.circleMode);
         addModeButton(p, "Cross Mode", DrawingArea.CrossMode);
         getContentPane().add(BorderLayout.WEST, p);
