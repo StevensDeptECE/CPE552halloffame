@@ -1,75 +1,70 @@
 
-float x;
-float y;
-float R;
-float p1;
-float p2;
-float c=0;
+int particleCount = 17000;
+Particle[] particles = new Particle[particleCount+1];
 
-void setup()  {
-  size(800, 600);
-  frameRate(10);
+void setup() 
+{
+  size(800,600);
+  colorMode(RGB, 255);
+  stroke(123, 104, 238);
+  frameRate(20);
+  for (int x = particleCount; x >= 0; x--) { 
+    particles[x] = new Particle();
+  }
+
 }
 
-void draw()  {
-  background(135 - c * 65, 206 - c * 75, 250 - c * 75);
-  //background(5, 57, 100);
-  if(c >= 2){
-    c = 0;
-  }else{
-    c += 0.03;
+void draw()
+{
+
+  translate(width/2, height/2);
+  background(0);
+  float turn = 0;
+
+  if (mousePressed) 
+    turn = (mouseX - pmouseX) * 0.00001;
+  for (int i = particleCount; i >= 0; i--) { 
+    Particle particle = (Particle) particles[i];
+    particle.update(turn);
+  } 
+}
+
+
+class Particle {
+  float angle;
+  float radius;
+  PVector previous = new PVector();
+  float dec;
+  float tilt;
+  float turnVelocity;
+  Particle() {
+      fill(255,255,255,2);
+
+    angle = random(50,1000) * 0.03;
+    radius = random(2,200);
+    tilt = random(0,50);
+    dec = (200 - radius) * 0.00004;
+    
   }
-  noStroke();
-  fill(0,8+8*cos(PI*c),16,75);
-  rect(0,0,800, 600);
-  strokeWeight(1);
-  stroke(255,200,100);
-  for(int i=0;i<20;i++){
-    x = random(800);
-    y = random(600);
-    beginShape();
-    fill(255,200,100);
-    for(int j=0;j<10;j++){
-      if (j%2 == 0){
-        R = 10;
-      }else{
-        R = 5;
-      }
-      p1 = R * cos(PI*j/5) + x;
-      p2 = R * sin(PI*j/5) + y;
-      vertex(p1,p2);
+
+  void update (float turn) {
+    PVector current = new PVector(radius * cos(angle)*1.2, tilt + 5 * cos(angle + 3.5), radius * sin(angle)*1.2);
+    if (turn != 0)
+      turnVelocity = turn * (501-radius);
+    angle -= dec + turnVelocity;
+    turnVelocity *= 0.90;
+    if (previous.x == 0) {
+      previous.set(current);
     }
-    endShape();
-    line(p1,p2+3,p1-40,p2-40*cos(PI/6));
-  }  
-  
-  stroke(255, 255, 0);
-  fill(255, 255, 0);
-  ellipse(0 + c * 400, 0, 150, 150);
-  
-  stroke(255);
-  fill(255);
-  ellipse(50,80,250,30);
-  ellipse(20,60,110,25);
-  ellipse(500,350,250,30);
-  ellipse(530,330,110,25);
-  stroke(200);
-  fill(200);
-  quad(150, 100, 450, 100, 450, 600, 150, 600);
-  quad(220, 50, 370, 50, 370, 100, 220, 100);
-  stroke(150);
-  fill(150);
-  quad(150, 100, 250, 100, 250, 600, 150, 600);
-  quad(220, 50, 270, 50, 270, 100, 220, 100);
-  stroke(255);
-  fill(255);
-  quad(270, 120, 430, 120, 430, 150, 270, 150);
-  quad(270, 170, 430, 170, 430, 200, 270, 200);
-  quad(270, 220, 430, 220, 430, 250, 270, 250);
-  quad(270, 270, 430, 270, 430, 300, 270, 300);
-  quad(270, 320, 430, 320, 430, 350, 270, 350);
-  quad(270, 370, 430, 370, 430, 400, 270, 400);
-  quad(270, 420, 430, 420, 430, 450, 270, 450);
-  quad(270, 470, 430, 470, 430, 500, 270, 500);
-  quad(270, 520, 430, 520, 430, 550, 270, 550);
+    isoLine(current,previous,angle);
+    previous.set(current);
+  }
+}  
+void isoLine(PVector begin, PVector end, float angle) {
+  PVector newBegin = new PVector(int(begin.x - begin.z), int((begin.x + begin.z)/2 - begin.y));
+  PVector newEnd = new PVector(int(end.x - end.z), int((end.x + end.z)/2 - end.y));
+stroke(106, 90, 205,100);
+     strokeWeight(1.3);
+ 
+  line (newBegin.x, newBegin.y, newEnd.x, newEnd.y);
 }

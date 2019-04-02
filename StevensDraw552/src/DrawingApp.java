@@ -45,7 +45,9 @@ public class DrawingApp extends JFrame {
         JPanel p = new JPanel();
         p.setLayout(new GridLayout(6, 1));
 
-        addModeButton(p, "Line Mode", DrawingArea.lineMode);
+        addModeButton(p, "line mode", DrawingArea.lineMode);
+        addModeButton(p, "ellipse mode", DrawingArea.Filledellipse);
+        
 //        addModeButton(p, "Rect Mode", rectMode);
         getContentPane().add(BorderLayout.WEST, p);
     }
