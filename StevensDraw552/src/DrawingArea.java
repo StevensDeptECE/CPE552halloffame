@@ -13,8 +13,6 @@ public class DrawingArea extends JPanel {
     public DrawingArea() {
         setMode(lineMode);
         drawList = new ArrayList<>();
-        //drawList.add(new Line(0,0, 300, 200));
-        //drawList.add(new Rect(100,300, 200, 400));
         addMouseListener(new HandleMouseEvents());
     }
 
