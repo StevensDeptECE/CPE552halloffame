@@ -11,6 +11,10 @@ public class DrawingArea extends JPanel {
     private Mode mode;
     protected static Mode lineMode = new LineMode();
 //    private static Mode rectMode = new RectMode();
+    protected static Mode rectMode = new RectMode();
+    protected static Mode Filledellipse = new filledellipse();
+    protected static Mode StarMode = new StarMode();
+    protected static Mode circleMode = new CircleMode();
     protected static Mode CrossMode = new CrossMode();
     public DrawingArea() {
         setMode(lineMode);
