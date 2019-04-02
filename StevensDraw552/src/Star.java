@@ -2,24 +2,28 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Star extends Shape {
-    private int x2, y2, level = 5;
-    private ArrayList<Integer> points;
+    private int x2, y2, numPoints = 5;
+    private int[] coords = new int[numPoints*2];
     public Star(int x, int y, int x2, int y2) {
         super(x,y);
         this.x2 = x2; this.y2 = y2;
-        points.add(x2); // Top Vertex
-        points.add(y2); // Top Vertex
         int r = distance(x,y,x2,y2);
-        double degree = Math.tan((x - y2) / (x - x2));
-        for (int i = 0; i < level - 1; i++){
-            degree += 72;
-            points.add((int)(Math.cos(degree) * r));
-            points.add((int)(Math.sin(degree) * r));
-        }
+        double degree = Math.atan((y2 - y) / (x2 - x));
         
-        for (int i = 0; i < points.size(); i++)
-            System.out.print(points.get(i));
-        
+        coords[0] = (x2); // Top Vertex
+        coords[1] = (y2); // Top Vertex
+        degree += 72;
+        coords[2] = (int)(Math.cos(degree) * r);
+        coords[3] = (int)(Math.sin(degree) * r);
+        degree += 72;
+        coords[4] = (int)(Math.cos(degree) * r);
+        coords[5] = (int)(Math.sin(degree) * r);
+        degree += 72;
+        coords[6] = (int)(Math.cos(degree) * r);
+        coords[7] = (int)(Math.sin(degree) * r);
+        degree += 72;
+        coords[8] = (int)(Math.cos(degree) * r);
+        coords[9] = (int)(Math.sin(degree) * r);
     }
     
     private int distance(int x, int y, int x2, int y2) {
@@ -28,8 +32,10 @@ public class Star extends Shape {
     
     @Override
     public void draw(Graphics g) {
-        //for (int i = 0; i <= 4*(level-1); i += 4) {
-          //  g.drawLine(points.get(i), points.get(i+1), points.get(i+2), points.get(i+3));
-        //}
+        g.drawLine(coords[0], coords[1], coords[2], coords[3]);
+        //g.drawLine(coords[2], coords[3], coords[4], coords[5]);
+        //g.drawLine(coords[4], coords[5], coords[6], coords[7]);
+        //g.drawLine(coords[6], coords[7], coords[8], coords[9]);
+        //g.drawLine(coords[8], coords[9], coords[0], coords[1]);
     }   
 }
