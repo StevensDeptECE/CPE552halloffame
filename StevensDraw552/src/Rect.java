@@ -10,6 +10,9 @@ public class Rect extends Shape {
     }
     @Override
     public void draw(Graphics g) {
-        g.drawRect(x, y, w1-x, h1-y);
+        if (x2>x && y2>y)
+        g.drawRect(x, y, x2-x, y2-y);
+        else
+        g.drawRect(x2, y2, x-x2, y-y2);  
     }
 }
