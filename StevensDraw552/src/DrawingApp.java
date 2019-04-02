@@ -1,24 +1,18 @@
 
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.Properties;
 import javax.swing.*;
 
-/**
- *
- * @author dkruger
 
- DrawingApp represents the application contains UI: menus, buttons, etc drawing
- area is in a subsidiary class @see DrawingArea
- *
- */
 public class DrawingApp extends JFrame {
     private DrawingArea drawing;
     private Properties prefs;
 
     private void buildMenus() {
-        //JMenuBar b = 
+        //JMenuBar b =
 
     }
 
@@ -35,7 +29,7 @@ public class DrawingApp extends JFrame {
             });
         }
     }
-    
+
     private void addModeButton(JPanel p, String label, Mode m) {
         ModeButton b = new ModeButton(label, m);
         p.add(b);
@@ -45,10 +39,9 @@ public class DrawingApp extends JFrame {
         JPanel p = new JPanel();
         p.setLayout(new GridLayout(6, 1));
 
-        addModeButton(p, "line mode", DrawingArea.lineMode);
+        addModeButton(p, "Line Mode", DrawingArea.lineMode);
+        addModeButton(p, "Rect Mode", DrawingArea.rectMode);
         addModeButton(p, "ellipse mode", DrawingArea.Filledellipse);
-        
-//        addModeButton(p, "Rect Mode", rectMode);
         getContentPane().add(BorderLayout.WEST, p);
     }
 
@@ -99,9 +92,11 @@ public class DrawingApp extends JFrame {
         c.add(BorderLayout.CENTER, drawing);
         setSize(1000, 800);
         setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
         DrawingApp d = new DrawingApp();
     }
+
 }
