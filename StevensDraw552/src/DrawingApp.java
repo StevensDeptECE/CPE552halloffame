@@ -48,6 +48,10 @@ public class DrawingApp extends JFrame {
         addModeButton(p, "Line Mode", DrawingArea.lineMode);
 //        addModeButton(p, "Rect Mode", rectMode);
         getContentPane().add(BorderLayout.WEST, p);
+        
+        addModeButton(p, "Circle Mode", DrawingArea.circleMode);
+//        addModeButton(p, "Rect Mode", rectMode);
+        getContentPane().add(BorderLayout.WEST, p);
     }
 
     private void loadPrefs() {

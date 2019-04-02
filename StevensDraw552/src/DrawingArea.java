@@ -10,6 +10,7 @@ public class DrawingArea extends JPanel {
     private ArrayList<Shape> drawList;
     private Mode mode;
     protected static Mode lineMode = new LineMode();
+    protected static Mode circleMode = new CircleMode();
 //    private static Mode rectMode = new RectMode();
     public DrawingArea() {
         setMode(lineMode);
