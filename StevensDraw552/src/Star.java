@@ -20,8 +20,8 @@ public class Star extends Shape {
     
     @Override
     public void draw(Graphics g) {
-        for (int i = 1; i <= level; i++) {
-            g.drawLine(x, y, x2, y2);
+        for (int i = 0; i <= 4*(level-1); i += 4) {
+            g.drawLine(points.get(i), points.get(i+1), points.get(i+2), points.get(i+3));
         }
     }   
 }
