@@ -1,15 +1,14 @@
 
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
-/**
- * @author dkruger
- */
+
 public class DrawingArea extends JPanel {
     private ArrayList<Shape> drawList;
     private Mode mode;
-    protected static Mode lineMode = new LineMode();
+   protected static Mode lineMode = new LineMode();
 //    private static Mode rectMode = new RectMode();
     protected static Mode rectMode = new RectMode();
     protected static Mode Filledellipse = new filledellipse();
@@ -17,18 +16,17 @@ public class DrawingArea extends JPanel {
     protected static Mode circleMode = new CircleMode();
     protected static Mode CrossMode = new CrossMode();
     protected static Mode fillRectMode = new FillRectMode();
+    protected static Mode TriangleMode = new TriangleMode();
     public DrawingArea() {
         setMode(lineMode);
         drawList = new ArrayList<>();
-        drawList.add(new Line(0,0, 300, 200));
-        drawList.add(new Rect(100,300, 200, 400));
         addMouseListener(new HandleMouseEvents());
     }
 
     public void setMode(Mode m) {
         mode = m;
     }
-    
+
     private class HandleMouseEvents extends MouseAdapter {
         private int startX, startY;
         @Override
@@ -44,8 +42,8 @@ public class DrawingArea extends JPanel {
             s.draw(g);
         }
     }
-    
-    
+
+
     public void paint(Graphics g) {
         for (Shape s : drawList)
             s.draw(g);
