@@ -48,6 +48,7 @@ public class DrawingApp extends JFrame {
         addModeButton(p, "Line Mode", DrawingArea.lineMode);
 //        addModeButton(p, "Rect Mode", rectMode);
         addModeButton(p, "Rect Mode", DrawingArea.rectMode);
+        addModeButton(p, "filRect Mode", DrawingArea.fillRectMode);
         addModeButton(p, "ellipse mode", DrawingArea.Filledellipse);
         //addModeButton(p, "Star Mode", DrawingArea.StarMode);
      
