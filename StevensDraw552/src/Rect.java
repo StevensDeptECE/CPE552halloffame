@@ -1,7 +1,4 @@
-/**
- * @author dkruger
- */
-
+package session07;
 import java.awt.*;
 public class Rect extends Shape {
     private int w, h;
