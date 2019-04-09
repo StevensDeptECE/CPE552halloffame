@@ -6,16 +6,14 @@
 
 /**
  *
- * @author caowanying
+ * @author liuyarong caowanying
  */
-
 public class NNMode extends Mode {
-
+    private int n = 5;
     public NNMode() {}
     @Override
     public Shape clickdrag(int x, int y, int x2, int y2) {
-       int n=5;
-       return new NN(x,y,x2,y2,n);
+        return new NN(x,y,x2,y2,n);
     }
-    
- }
+}
+
