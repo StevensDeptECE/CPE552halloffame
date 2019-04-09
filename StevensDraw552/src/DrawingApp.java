@@ -41,6 +41,7 @@ public class DrawingApp extends JFrame {
 
         addModeButton(p, "Line Mode", DrawingArea.lineMode);
         addModeButton(p, "Rect Mode", DrawingArea.rectMode);
+        addModeButton(p, "Arrow Mode", DrawingArea.arrowMode);
         getContentPane().add(BorderLayout.WEST, p);
     }
 
