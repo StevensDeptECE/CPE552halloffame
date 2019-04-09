@@ -1,3 +1,5 @@
+// Authors: Tyler Bryk & Mike Eng
+
 import java.awt.*;
 import static java.lang.Math.*;
 
@@ -12,7 +14,6 @@ public class Star extends Shape {
         dx = x2-x;
         dy = y2-y;
         
-        System.out.println("Start: " + x + " " + y);
         if (dx == 0) dx = 1;
         if (dy == 0) dy = 1;
         int r = distance(x,y,x2,y2);
