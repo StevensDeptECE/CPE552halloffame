@@ -1,10 +1,8 @@
-// Authors: Tyler Bryk & Mike Eng
-
 import java.awt.*;
 import static java.lang.Math.*;
 
 public class Star extends Shape {
-    private int x2, y2, numPoints = 5;
+    private int x2, y2, numPoints = 8;
     private final int[] coords = new int[numPoints*2];
     private int dx, dy;
     
@@ -46,17 +44,37 @@ public class Star extends Shape {
 
     @Override
     public void draw(Graphics g) {
-        
+        /*
         g.drawLine(coords[0], coords[1], coords[4], coords[5]);
         g.drawLine(coords[4], coords[5], coords[8], coords[9]);
         g.drawLine(coords[8], coords[9], coords[2], coords[3]);
         g.drawLine(coords[2], coords[3], coords[6], coords[7]);
-        g.drawLine(coords[6], coords[7], coords[0], coords[1]);
+        g.drawLine(coords[6], coords[7], coords[0], coords[1]);// YOU FOOL TYLER, YOU PUT 5 HERE INSTEAD OF 6 THIS COULD HAVE SAVED ME 3 HOURS OF CODING I COULD HAVE TAKEN A GODDAMN SHOWER THIS MORNING
+        
         
         g.drawLine(x,y, coords[4], coords[5]);
         g.drawLine(x,y, coords[8], coords[9]);
         g.drawLine(x,y, coords[2], coords[3]);
         g.drawLine(x,y, coords[6], coords[7]);
         g.drawLine(x,y, coords[0], coords[1]);
+*/
+        
+        if(numPoints % 2 == 0){//even
+            for(int i = 0; i <= numPoints; i += 2){
+                if(i + numPoints + 3 > numPoints * 2){
+                   // g.drawLine(coords[i], coords[i+1], coords[i + numPoints + 2 - (numPoints * 2)], coords[i + numPoints + 3 - (numPoints * 2)]);
+                } else {
+                    System.out.println(i + numPoints + 3);
+                    g.drawLine(coords[i], coords[i+1], coords[i + numPoints + 2], coords[i + numPoints + 3]);
+                   
+                }
+                
+                g.drawLine(x,y, coords[i], coords[i+1]);
+                g.drawLine(x,y, coords[i + numPoints - 2], coords[i+ numPoints -1]);
+                g.drawLine(coords[i], coords[i+1], coords[i +numPoints - 2], coords[i + numPoints - 1]);
+            }
+        } else { // odd
+            
+        }
     }
 }
