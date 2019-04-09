@@ -4,17 +4,18 @@
  * and open the template in the editor.
  */
 
-
 /**
  *
- * @author Chesus
+ * @author 18580
  */
-public class RectMode extends Mode {
+public class filledellipse extends Mode {
 
-    public RectMode() {}
+    public filledellipse() {}
     @Override
     public Shape clickdrag(int x, int y, int x2, int y2) {
-        return new Rect(x, y, x2-x, y2-y);
+        return new ellipse(x, y, x2, y2);
     }
     
 }
+    
+

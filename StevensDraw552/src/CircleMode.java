@@ -4,17 +4,16 @@
  * and open the template in the editor.
  */
 
-
 /**
  *
- * @author Chesus
+ * @author Class2020
  */
-public class RectMode extends Mode {
-
-    public RectMode() {}
+import java.math.*;
+public class CircleMode extends Mode{
+    public CircleMode(){  
+    }
     @Override
     public Shape clickdrag(int x, int y, int x2, int y2) {
-        return new Rect(x, y, x2-x, y2-y);
+        return new Circle(x,y,x2, y2);
     }
-    
 }

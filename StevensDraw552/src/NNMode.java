@@ -4,17 +4,18 @@
  * and open the template in the editor.
  */
 
-
 /**
  *
- * @author Chesus
+ * @author caowanying
  */
-public class RectMode extends Mode {
 
-    public RectMode() {}
+public class NNMode extends Mode {
+
+    public NNMode() {}
     @Override
     public Shape clickdrag(int x, int y, int x2, int y2) {
-        return new Rect(x, y, x2-x, y2-y);
+       int n=5;
+       return new NN(x,y,x2,y2,n);
     }
     
-}
+ }

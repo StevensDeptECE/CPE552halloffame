@@ -8,10 +8,18 @@ import java.util.*;
 public class DrawingArea extends JPanel {
     private ArrayList<Shape> drawList;
     private Mode mode;
-    protected static Mode lineMode = new LineMode();
+   protected static Mode lineMode = new LineMode();
+//    private static Mode rectMode = new RectMode();
     protected static Mode rectMode = new RectMode();
     protected static Mode arrowMode = new ArrowMode();
 
+    protected static Mode Filledellipse = new filledellipse();
+    protected static Mode StarMode = new StarMode();
+    protected static Mode circleMode = new CircleMode();
+    protected static Mode CrossMode = new CrossMode();
+    protected static Mode fillRectMode = new FillRectMode();
+    protected static Mode TriangleMode = new TriangleMode();
+    protected static Mode SymbolMode = new SymbolMode();
     public DrawingArea() {
         setMode(lineMode);
         drawList = new ArrayList<>();

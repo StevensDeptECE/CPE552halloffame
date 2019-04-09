@@ -1,5 +1,3 @@
-
-
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -38,10 +36,17 @@ public class DrawingApp extends JFrame {
     private void buildToolbar() {
         JPanel p = new JPanel();
         p.setLayout(new GridLayout(6, 1));
-
         addModeButton(p, "Line Mode", DrawingArea.lineMode);
+//        addModeButton(p, "Rect Mode", rectMode);
         addModeButton(p, "Rect Mode", DrawingArea.rectMode);
         addModeButton(p, "Arrow Mode", DrawingArea.arrowMode);
+        addModeButton(p, "filRect Mode", DrawingArea.fillRectMode);
+        addModeButton(p, "ellipse mode", DrawingArea.Filledellipse);
+        //addModeButton(p, "Star Mode", DrawingArea.StarMode)
+        addModeButton(p, "Circle Mode", DrawingArea.circleMode);
+        addModeButton(p, "Cross Mode", DrawingArea.CrossMode);
+        addModeButton(p, "Triangle Mode", DrawingArea.TriangleMode);
+        addModeButton(p, "Symbol Mode", DrawingArea.SymbolMode);
         getContentPane().add(BorderLayout.WEST, p);
     }
 
