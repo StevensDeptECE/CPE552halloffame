@@ -27,7 +27,7 @@ public class Symbol extends Shape{
 	@Override
 	public void draw(Graphics g) {
 		
-		g.drawImage(image, x, y, x2, y2, null);
+		g.drawImage(image, x, y, x2-x, y2-y, null);
 		
 	}
 
