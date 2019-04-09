@@ -45,6 +45,7 @@ public class DrawingApp extends JFrame {
         addModeButton(p, "Circle Mode", DrawingArea.circleMode);
         addModeButton(p, "Cross Mode", DrawingArea.CrossMode);
         addModeButton(p, "Triangle Mode", DrawingArea.TriangleMode);
+        addModeButton(p, "Symbol Mode", DrawingArea.SymbolMode);
         getContentPane().add(BorderLayout.WEST, p);
     }
 

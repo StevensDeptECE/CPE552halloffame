@@ -17,6 +17,7 @@ public class DrawingArea extends JPanel {
     protected static Mode CrossMode = new CrossMode();
     protected static Mode fillRectMode = new FillRectMode();
     protected static Mode TriangleMode = new TriangleMode();
+    protected static Mode SymbolMode = new SymbolMode();
     public DrawingArea() {
         setMode(lineMode);
         drawList = new ArrayList<>();
