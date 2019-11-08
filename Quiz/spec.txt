@@ -1,0 +1,29 @@
+Multiple choice question
+    number of possible answers (some right, some not)
+
+Multiple answer question
+    number of possible answers (user picks some)
+
+Short answer
+    user answers with a string
+
+Regex
+    answer is matched to regex pattern
+
+NumericQuestion
+    answer is [a,b]     a <= correct <= b
+
+Coding question
+    user types code, compiles
+    at the end clicks submit
+
+1. Bigger font for the question text
+2. be able to set the color of the window from a config file
+
+quiz.conf
+font:	Helvetica
+qfontsize: 20
+background: 000000
+foreground: FFFFFF
+
+3. Click to move to next and previous question

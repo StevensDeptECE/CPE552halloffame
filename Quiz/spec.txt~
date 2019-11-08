@@ -1,0 +1,18 @@
+Multiple choice question
+    number of possible answers (some right, some not)
+
+Multiple answer question
+    number of possible answers (user picks some)
+
+Short answer
+    user answers with a string
+
+Regex
+    answer is matched to regex pattern
+
+NumericQuestion
+    answer is [a,b]     a <= correct <= b
+
+Coding question
+    user types code, compiles
+    at the end clicks submit
