@@ -27,7 +27,7 @@ FillInBlanksView
 
 
 Coding question
-    user types code, there is a compile button. When pressed, the program compiles the code and sdisplays the error messages.
+    user types code, there is a compile button. When pressed, the program compiles the code and displays the error messages.
 
 1. Bigger font for the question text
 2. be able to set the color of the window from a config file
