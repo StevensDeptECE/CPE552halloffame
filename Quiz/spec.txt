@@ -1,29 +1,71 @@
 Multiple choice question
     number of possible answers (some right, some not)
 
-Multiple answer question
+MultipleChoiceQuestionView (the class to display the multiple choice question to the screen)
+
+MultipleAnswerQuestion
     number of possible answers (user picks some)
 
-Short answer
+MultipleAnswerQuestionView (the class to display the multiple choice question to the screen)
+
+ShortAnswer
     user answers with a string
+ShortAnswerView
 
 Regex
-    answer is matched to regex pattern
+    answer is matched to regex pattern. This is a subclass of ShortAnswer
 
 NumericQuestion
     answer is [a,b]     a <= correct <= b
 
+NumericQuestionView
+
+FillInBlanks
+	Text containing multiple blanks which are filled in.  The user is answering multiple short answers in a single question
+
+FillInBlanksView
+
+
 Coding question
-    user types code, compiles
-    at the end clicks submit
+    user types code, there is a compile button. When pressed, the program compiles the code and sdisplays the error messages.
 
 1. Bigger font for the question text
 2. be able to set the color of the window from a config file
 
-quiz.conf
-font:	Helvetica
-qfontsize: 20
-background: 000000
-foreground: FFFFFF
 
-3. Click to move to next and previous question
+Quiz.score()
+	Write the method that grades the quiz for all kinds of questions. You will need to add methods probably to Question and force everyone to write methods that tell you when a question is correctly answered in order to score it.
+
+
+
+quiz.conf
+Write code to load the following attributes from a file into a Properties object.
+Then use these attributes to set the color and font for various attributes in the program.
+The person who writes this is only responsible to write the object that loads the configuration information. The application will then load those colors/fonts, and everyone with a component is then obligated to use them.
+
+background 000000
+foreground FFFFFF
+titlefont	Helvetica
+titlefontsize	24
+questionfont	Times
+questionsize	20
+
+Preferences Editor
+Write a GUI editor to let a user select the colors and fonts in the configuration file above and save out the results to quiz.conf
+
+
+Load/Save quiz
+	  Add the ability to load and store the state of a quiz. Note that this may require changes to many classes, but whoever writes this should make it work on a separate branch and when it works, merge in.
+
+Show answers
+after quiz is graded, allow showing the correct answers as well as those the user typed.
+This should be a boolean, in other words show the score and if a parameter is true, you can also show all the questions
+
+
+
+
+
+
+
+
+
