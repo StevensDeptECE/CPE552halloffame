@@ -27,6 +27,13 @@ public class MultipleChoiceQuestion extends Question {
         answerList.add(correctIndex, a);
     }
     
+    @Override
+    public double checkAnswer(String a){
+        if (getAnswer().getText().equals(a))
+            return 1.0;
+        else
+            return 0.0;
+    }
     public ArrayList<Answer> getAnswers(){
         return answerList;
     }
