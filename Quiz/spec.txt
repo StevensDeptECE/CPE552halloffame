@@ -32,11 +32,11 @@ FillInBlanks        AOIRA
 
 FillInBlanksView    CHUCK-HEJUN
 
-FormulaQuestion
+FormulaQuestion bowenli0379
     generate a family of numeric problems
     "f = m*a"     m = [0,.1, 10]   a = [1,5]
 
-FormulaQuestionView
+FormulaQuestionView Mulburry0v0
 
 Coding question MDIGREG2
     user types code, there is a compile button. When pressed, the program compiles the code and displays the error messages.
