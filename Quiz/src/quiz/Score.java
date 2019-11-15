@@ -12,8 +12,13 @@ public class Scores entends Quiz {
         return scores;
     }
 
+<<<<<<< HEAD
     public long getScore() {
         return scores;
+=======
+    public double getScores() {
+        return Scores;
+>>>>>>> f842e862e73697fe2282010d84963d3720ba4801
     }
 
     public void setScores(double score) {
