@@ -11,7 +11,7 @@ Xintang He
 Donglin Chen
 Zhixin Jiang ShortAnswerView 
 Xiao Zhao ShortAnswer
-Xinru Zhang
+Xinru Zhang MultipleAnswerQuestionView
 Tianze Liang
 Feng Liu
 Mengjie Min MultipleAnswerQuestion  
