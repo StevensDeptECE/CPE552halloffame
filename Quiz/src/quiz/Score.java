@@ -4,26 +4,20 @@ import java.util.HashMap;
  *
  * @yinghao wu   Jianyu wang 
  */
-public class Scores entends JPanel {
-    private double Scores;
-    private String quizName;
+public class Scores entends Quiz {
+    private String quizName; 
+    private HashMap<Question, Double> scores;
 
-    public String getquizName() {
-        return quizName;
+    public long getQuestionScores() {
+        return scores;
     }
 
-    public void setquizName(String name) {
-        this.quizName = name;
-    }
-    private HashMap<Quiz, Double> scores;
-    
-
-    public long getScores() {
-        return Scores;
+    public long getScore() {
+        return scores;
     }
 
-    public void setScores(double Score) {
-        this.Scores = Scores;
+    public void setScores(double score) {
+        this.scores = score;
     }
 
     public HashMap<Quiz, Double> getScores() {
