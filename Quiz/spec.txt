@@ -50,7 +50,7 @@ CodingQuestionView
 2. be able to set the color of the window from a config file
 
 
-Quiz.score()
+Quiz.score()   37wjy
 	Write the method that grades the quiz for all kinds 
 of questions. You will need to add methods probably to
  Question and force everyone to write methods that tell 
