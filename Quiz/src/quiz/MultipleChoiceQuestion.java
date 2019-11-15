@@ -4,37 +4,39 @@ import java.util.*;
  * @author edytioco
  */
 public class MultipleChoiceQuestion extends Question {
-    ArrayList<String> answerList = new ArrayList<>();
-    Answer correct;
-    int correctIndex;
+    private ArrayList<Answer> answerList = new ArrayList<>();
+    private int correctIndex = 0;
+    // TODO: figure out how to set correct. should correct answer always be first?
     // print out question
     // print out potential answers
     
-    
-    
-    // Answer: make an array of choices, with one identified as true
-    
     // user has to enter his choice
-        // make this a string input
+    // make this a string input
     
-    // ID what answer is correct is correct
     
     
     
     
     @Override
     public Answer getAnswer() {
-        correct.setText(answerList.get(correctIndex)); // TODO: figure out how to set correct.
-        return correct;
+        return answerList.get(correctIndex);
     }
 
     @Override
     public void setAnswer(Answer a) {
-        answerList.add(correctIndex, a.getText());
+        answerList.add(correctIndex, a);
     }
     
-    // populate the 
-    public void setWrongAnswers(Answer a){
-        
+    public ArrayList<Answer> getAnswers(){
+        return answerList;
     }
+    
+    public void setAnswers(ArrayList<Answer> list){
+        for (Answer a : list){
+            answerList.add(a);
+        }
+    }
+    
+    
+    
 }
