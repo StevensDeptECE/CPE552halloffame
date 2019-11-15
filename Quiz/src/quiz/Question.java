@@ -14,4 +14,5 @@ public abstract class Question {
     }
     public abstract Answer getAnswer();
     public abstract void setAnswer(Answer a);
+    public abstract double checkAnswer(String a);
 }
