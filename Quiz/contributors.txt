@@ -8,7 +8,7 @@ yinghao wu
 Zheng Liu
 Jiayi Sun
 Xintang He
-Donglin Chen ShortAnswer
+Donglin Chen
 Zhixin Jiang ShortAnswerView 
 Xiao Zhao ShortAnswer
 Xinru Zhang
@@ -17,3 +17,4 @@ Feng Liu
 Mengjie Min MultipleAnswerQuestion  
 Jianyu wang
 Chenhui yang
+Peize Yu
