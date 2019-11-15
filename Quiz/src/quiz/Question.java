@@ -14,5 +14,5 @@ public abstract class Question {
     }
     public abstract Answer getAnswer();
     public abstract void setAnswer(Answer a);
-    public abstract double checkAnswer(String a);
+    public abstract double checkAnswer(String a); // 0.0 = wrong, 1.0 = full credit
 }
