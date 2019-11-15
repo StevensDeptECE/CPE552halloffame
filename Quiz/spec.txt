@@ -1,47 +1,70 @@
-Multiple choice question
+Multiple choice question            EDYTIOCO
     number of possible answers (some right, some not)
 
 MultipleChoiceQuestionView (the class to display the multiple choice question to the screen)
 
-MultipleAnswerQuestion
+MultipleAnswerQuestion      MENGNJIEMIN
     number of possible answers (user picks some)
 
-MultipleAnswerQuestionView (the class to display the multiple choice question to the screen)
+MultipleAnswerQuestionView    XINRUZHANG
+(the class to display the multiple choice question to the screen)
 
 ShortAnswer
     user answers with a string
-ShortAnswerView
+    What is 2+2?    answer="4"
+ShortAnswerView 
 
-Regex
+RegexQuestion   
     answer is matched to regex pattern. This is a subclass of ShortAnswer
+    What are the colors of the french flag?
+    red white blue  red, white, and blue
+    red orange yellow green blue purple
 
-NumericQuestion
+
+NumericQuestion XIAN96
     answer is [a,b]     a <= correct <= b
+    what is 2+2?     [3.9 .. 4.1]    4.01  ok...
 
-NumericQuestionView
+NumericQuestionView WOOSYANG
 
-FillInBlanks
+FillInBlanks        AOIRA
 	Text containing multiple blanks which are filled in.  The user is answering multiple short answers in a single question
 
-FillInBlanksView
+FillInBlanksView    CHUCK-HEJUN
 
+FormulaQuestion
+    generate a family of numeric problems
+    "f = m*a"     m = [0,.1, 10]   a = [1,5]
 
-Coding question
+FormulaQuestionView
+
+Coding question MDIGREG2
     user types code, there is a compile button. When pressed, the program compiles the code and displays the error messages.
+    Runtime r = Runtime.getRuntime();
+    Process p = r.exec("javac myprogr.java");
+
+CodingQuestionView
+
 
 1. Bigger font for the question text
 2. be able to set the color of the window from a config file
 
 
 Quiz.score()
-	Write the method that grades the quiz for all kinds of questions. You will need to add methods probably to Question and force everyone to write methods that tell you when a question is correctly answered in order to score it.
+	Write the method that grades the quiz for all kinds 
+of questions. You will need to add methods probably to
+ Question and force everyone to write methods that tell 
+you when a question is correctly answered in order to score it.
 
 
 
-quiz.conf
+quiz.conf       ZHI
 Write code to load the following attributes from a file into a Properties object.
 Then use these attributes to set the color and font for various attributes in the program.
-The person who writes this is only responsible to write the object that loads the configuration information. The application will then load those colors/fonts, and everyone with a component is then obligated to use them.
+The person who writes this is only responsible to write the object that loads
+ the configuration information. The application will then load
+ those colors/fonts, and everyone with a component is then
+ obligated to use them.
 
 background 000000
 foreground FFFFFF
@@ -50,7 +73,7 @@ titlefontsize	24
 questionfont	Times
 questionsize	20
 
-Preferences Editor
+Preferences Editor      SHAHEEN  SBIRADA1
 Write a GUI editor to let a user select the colors and fonts in the configuration file above and save out the results to quiz.conf
 
 
@@ -61,6 +84,9 @@ Show answers
 after quiz is graded, allow showing the correct answers as well as those the user typed.
 This should be a boolean, in other words show the score and if a parameter is true, you can also show all the questions
 
+Actions
+    playaudio
+    
 
 
 
