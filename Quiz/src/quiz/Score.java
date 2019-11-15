@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 /**
  *
- * @yinghao
+ * @yinghao wu   Jianyu wang 
  */
 public class Scores entends JPanel {
     private double Scores;
