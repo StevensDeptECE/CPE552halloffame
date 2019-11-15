@@ -3,7 +3,7 @@ Multiple choice question            EDYTIOCO
 
 MultipleChoiceQuestionView (the class to display the multiple choice question to the screen)
 
-MultipleAnswerQuestion      MENGNJIEMIN
+MultipleAnswerQuestion      MENGJIEMIN
     number of possible answers (user picks some)
 
 MultipleAnswerQuestionView    XINRUZHANG
