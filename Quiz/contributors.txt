@@ -8,10 +8,10 @@ yinghao wu
 Zheng Liu
 Jiayi Sun
 Xintang He
-Donglin Chen
+Donglin Chen FormulaQuestion
 Zhixin Jiang ShortAnswerView 
 Xiao Zhao ShortAnswer
-Xinru Zhang MultipleAnswerQuestionView
+Xinru Zhang
 Tianze Liang
 Feng Liu
 Mengjie Min MultipleAnswerQuestion  
@@ -20,4 +20,3 @@ Chenhui yang
 Peize Yu
 Bowen Li
 Lijin Zhou
-Lunzhang Guo
