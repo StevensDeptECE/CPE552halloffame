@@ -18,7 +18,7 @@ public class Scores entends JPanel {
     private HashMap<Quiz, Double> scores;
     
 
-    public long getScores() {
+    public double getScores() {
         return Scores;
     }
 
