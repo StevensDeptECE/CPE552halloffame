@@ -6,7 +6,7 @@
 
 float theta, step;  
 int num=5, frames = 1200;  
-Mountain[] layers = new Mountain[num];  //
+Mountain[] layers = new Mountain[num];
 
 void setup() {  
   size(600, 400);  
@@ -24,8 +24,6 @@ void draw() {
     layers[i].display();
   }  
   theta += TWO_PI/frames;  
-
-  //if (frameCount%2==0 && frameCount<=frames) saveFrame("image-###.gif");
 }  
 
 class Mountain {  
