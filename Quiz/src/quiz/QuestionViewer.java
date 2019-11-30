@@ -37,7 +37,7 @@ public class QuestionViewer extends JPanel {
 	}
 	
 	public void paint(Graphics g) {
-		var q = quiz.getQuestions().get(questionNum);
+		Question q = quiz.getQuestions().get(questionNum);
 		String question = q.getQuestion();
 		g.drawString(question, 15, 100);
 
