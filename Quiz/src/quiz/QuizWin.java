@@ -14,8 +14,9 @@ public class QuizWin extends JFrame {
 		super("Quiz");
 		setSize(1000, 800);
 		Container c = getContentPane();
-		QuestionViewer viewer = new QuestionViewer();
-		viewer.setQuiz(Quiz.quiz1);
+		// QuestionViewer viewer = new QuestionViewer();
+		NumericQuestionViewer viewer = new NumericQuestionViewer();
+                 viewer.setQuiz(Quiz.quiz1);
 		c.add(BorderLayout.CENTER, viewer);
 		/*
 		 * JScrollBar s = new JScrollBar(JScrollBar.HORIZONTAL, 0, 1, 0,
@@ -27,10 +28,9 @@ public class QuizWin extends JFrame {
 		c.add(BorderLayout.WEST, prev);
 		
 		prev.addActionListener(new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if(viewer.getQuestionNum()>0) {
+				if(viewer.getQuestionNum() > 0) {
 					viewer.QuestionNumminusone();
 					repaint();
 				}
@@ -55,8 +55,6 @@ public class QuizWin extends JFrame {
 
 		});
 
-		
-		
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
