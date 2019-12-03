@@ -1,4 +1,9 @@
-/* Author: Zhi Chen */
+/* 
+  Author: Zhi Chen
+  This is a smulation of a 2D raining scene.
+  You use mouse clicks to pause/play the scene.
+*/
+
 class RainDrop{
   private float w,h,x,y,v;
   private void initialize(){
