@@ -1,7 +1,7 @@
 /* 
   Author: Zhi Chen
   This is a smulation of a 2D raining scene.
-  You use mouse clicks to pause/play the scene.
+  You can use mouse clicks to pause/play the scene.
 */
 
 class RainDrop{
