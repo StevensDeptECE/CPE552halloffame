@@ -3,7 +3,6 @@ Hints:- use UP/DOWN/LEFT/RIGHT to control speed.
       - use Q/E/W/S/A/D to control camera.
 Author:
 Tianfeng Du
-
 */
 
 
