@@ -1,4 +1,4 @@
-package com.stevens.edu.CoolGraphics;
+//package com.stevens.edu.CoolGraphics;
 // Reference - http://popscan.blogspot.com/2012/04/fisheye-lens-equation-simple-fisheye.html
 // Reference - https://stackoverflow.com/questions/8662349/convert-negative-image-to-positive
 // Reference - https://alvinalexander.com/blog/post/jfc-swing/complete-java-program-code-open-read-display-image-file
