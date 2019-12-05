@@ -1,14 +1,10 @@
-//package com.stevens.edu.CoolGraphics;
+package com.stevens.edu.CoolGraphics;
 // Reference - http://popscan.blogspot.com/2012/04/fisheye-lens-equation-simple-fisheye.html
 // Reference - https://stackoverflow.com/questions/8662349/convert-negative-image-to-positive
 // Reference - https://alvinalexander.com/blog/post/jfc-swing/complete-java-program-code-open-read-display-image-file
 // In order to run this projcet, it is required to install javafx
 // Link - https://gluonhq.com/products/javafx/
 // Link for Intellij - https://www.jetbrains.com/help/idea/javafx.html
-
-import com.sun.media.jfxmediaimpl.platform.Platform;
-import com.sun.prism.Image;
-import javafx.embed.swing.JFXPanel;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
