@@ -1,0 +1,36 @@
+Author Donglin Chen
+ 
+
+float[] x = new float[100];
+float[] y = new float[100];
+float[] speed = new float[100];
+ 
+void setup() {
+  size(500, 400);
+  background(84,153,209);
+  stroke(255);
+  strokeWeight(5);
+ 
+  int i = 0;
+  while(i < 100) {  
+    x[i] = random(0, width);
+    y[i] = random(0, height);
+    speed[i] = random(1, 5);
+    i = i + 1;
+  }
+}
+ 
+void draw() {
+  background(84,153,209);
+  
+  int i = 0;
+  while(i < 100) {
+    point(x[i], y[i]);
+  
+    y[i] = y[i] + speed[i];
+    if(y[i] >height) {
+      y[i] = 0;
+    }
+    i = i + 1;
+  }
+}
